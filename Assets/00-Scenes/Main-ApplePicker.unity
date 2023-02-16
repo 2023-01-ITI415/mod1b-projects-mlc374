@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 675896694}
   - component: {fileID: 675896696}
   - component: {fileID: 675896695}
+  - component: {fileID: 675896697}
   m_Layer: 5
   m_Name: HighScore
   m_TagString: Untagged
@@ -365,6 +366,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675896693}
   m_CullTransparentMesh: 1
+--- !u!114 &675896697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675896693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513e5a17c9ee10d4eba1e55d30a4cc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetHighScoreNow: 0
 --- !u!1 &792234105
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +480,7 @@ MonoBehaviour:
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
+  basketList: []
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0
