@@ -15,9 +15,10 @@ public class Prototype : MonoBehaviour
     static private Prototype S; //a private singleton
 
     [Header("Inscribed")]
-    public Text             uitLevel; //the UIText_Level Text
-    public Vector3          mapPos; //the place to put the map
-    public GameObject[]    maps; //an array of the maps
+    public Text uitLevel; //the UIText_Level Text
+    public Text uitWin;
+    public Vector3 mapPos; //the place to put the map
+    public GameObject[] maps; //an array of the maps
 
     [Header("Dynamic")]
     public int level; //the current level
@@ -66,7 +67,7 @@ public class Prototype : MonoBehaviour
     {
         UpdateGUI();
         //check for level end
-        if ( (mode == ProGameMode.playing) && BallGoal.goalMet)
+        if ((mode == ProGameMode.playing) && BallGoal.goalMet)
         {
             //change mode to stop checking for level end
             mode = ProGameMode.levelEnd;
@@ -81,7 +82,8 @@ public class Prototype : MonoBehaviour
         level++;
         if (level == levelMax)
         {
-            level = 0;
+            Destroy(map);
+            uitWin.text = "Levels Complete!";
         }
         StartLevel();
     }
