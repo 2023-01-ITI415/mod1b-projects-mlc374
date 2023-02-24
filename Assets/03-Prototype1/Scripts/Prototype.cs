@@ -84,6 +84,7 @@ public class Prototype : MonoBehaviour
         {
             Destroy(map);
             uitWin.text = "Levels Complete!";
+            uitLevel.text = " ";
         }
         StartLevel();
     }
